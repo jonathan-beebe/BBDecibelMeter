@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		51240A8E15D097760079DFE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51240A8D15D097760079DFE4 /* UIKit.framework */; };
+		51240A9015D097760079DFE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51240A8F15D097760079DFE4 /* Foundation.framework */; };
+		51240A9215D097760079DFE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51240A9115D097760079DFE4 /* CoreGraphics.framework */; };
+		51240A9815D097760079DFE4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51240A9615D097760079DFE4 /* InfoPlist.strings */; };
+		51240A9A15D097760079DFE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240A9915D097760079DFE4 /* main.m */; };
+		51240A9E15D097760079DFE4 /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240A9D15D097760079DFE4 /* BBAppDelegate.m */; };
+		51240AA115D097760079DFE4 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51240A9F15D097760079DFE4 /* MainStoryboard_iPhone.storyboard */; };
+		51240AA415D097760079DFE4 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51240AA215D097760079DFE4 /* MainStoryboard_iPad.storyboard */; };
+		51240AA715D097760079DFE4 /* BBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240AA615D097760079DFE4 /* BBViewController.m */; };
+		51240AAF15D097770079DFE4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51240AAE15D097770079DFE4 /* SenTestingKit.framework */; };
+		51240AB015D097770079DFE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51240A8D15D097760079DFE4 /* UIKit.framework */; };
+		51240AB115D097770079DFE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51240A8F15D097760079DFE4 /* Foundation.framework */; };
+		51240AB915D097770079DFE4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51240AB715D097770079DFE4 /* InfoPlist.strings */; };
+		51240ABC15D097770079DFE4 /* BBDecibelMeterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240ABB15D097770079DFE4 /* BBDecibelMeterTests.m */; };
+		51240AD915D09AA70079DFE4 /* BBDecibelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240AD615D09AA70079DFE4 /* BBDecibelMeter.m */; };
+		51240ADA15D09AA70079DFE4 /* BBDecibelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240AD615D09AA70079DFE4 /* BBDecibelMeter.m */; };
+		51240ADB15D09AA70079DFE4 /* BBMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240AD815D09AA70079DFE4 /* BBMath.m */; };
+		51240ADC15D09AA70079DFE4 /* BBMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240AD815D09AA70079DFE4 /* BBMath.m */; };
+		51240AE015D09D4F0079DFE4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51240ADF15D09D4F0079DFE4 /* AVFoundation.framework */; };
+		51ED681C15D0A28100EC762C /* F3BarGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED681B15D0A28100EC762C /* F3BarGauge.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		51240AB215D097770079DFE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51240A8015D097760079DFE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51240A8815D097760079DFE4;
+			remoteInfo = BBDecibelMeter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		51240A8915D097760079DFE4 /* BBDecibelMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBDecibelMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51240A8D15D097760079DFE4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		51240A8F15D097760079DFE4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		51240A9115D097760079DFE4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		51240A9515D097760079DFE4 /* BBDecibelMeter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BBDecibelMeter-Info.plist"; sourceTree = "<group>"; };
+		51240A9715D097760079DFE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		51240A9915D097760079DFE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		51240A9B15D097760079DFE4 /* BBDecibelMeter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBDecibelMeter-Prefix.pch"; sourceTree = "<group>"; };
+		51240A9C15D097760079DFE4 /* BBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAppDelegate.h; sourceTree = "<group>"; };
+		51240A9D15D097760079DFE4 /* BBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBAppDelegate.m; sourceTree = "<group>"; };
+		51240AA015D097760079DFE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		51240AA315D097760079DFE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		51240AA515D097760079DFE4 /* BBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBViewController.h; sourceTree = "<group>"; };
+		51240AA615D097760079DFE4 /* BBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBViewController.m; sourceTree = "<group>"; };
+		51240AAD15D097770079DFE4 /* BBDecibelMeterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBDecibelMeterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51240AAE15D097770079DFE4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		51240AB615D097770079DFE4 /* BBDecibelMeterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BBDecibelMeterTests-Info.plist"; sourceTree = "<group>"; };
+		51240AB815D097770079DFE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		51240ABA15D097770079DFE4 /* BBDecibelMeterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBDecibelMeterTests.h; sourceTree = "<group>"; };
+		51240ABB15D097770079DFE4 /* BBDecibelMeterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBDecibelMeterTests.m; sourceTree = "<group>"; };
+		51240AD515D09AA70079DFE4 /* BBDecibelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBDecibelMeter.h; sourceTree = "<group>"; };
+		51240AD615D09AA70079DFE4 /* BBDecibelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBDecibelMeter.m; sourceTree = "<group>"; };
+		51240AD715D09AA70079DFE4 /* BBMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMath.h; sourceTree = "<group>"; };
+		51240AD815D09AA70079DFE4 /* BBMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMath.m; sourceTree = "<group>"; };
+		51240ADD15D09D2B0079DFE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		51240ADF15D09D4F0079DFE4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		51ED681A15D0A28100EC762C /* F3BarGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3BarGauge.h; sourceTree = "<group>"; };
+		51ED681B15D0A28100EC762C /* F3BarGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3BarGauge.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51240A8615D097760079DFE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51240AE015D09D4F0079DFE4 /* AVFoundation.framework in Frameworks */,
+				51240A8E15D097760079DFE4 /* UIKit.framework in Frameworks */,
+				51240A9015D097760079DFE4 /* Foundation.framework in Frameworks */,
+				51240A9215D097760079DFE4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51240AA915D097770079DFE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51240AAF15D097770079DFE4 /* SenTestingKit.framework in Frameworks */,
+				51240AB015D097770079DFE4 /* UIKit.framework in Frameworks */,
+				51240AB115D097770079DFE4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51240A7E15D097760079DFE4 = {
+			isa = PBXGroup;
+			children = (
+				51240ADF15D09D4F0079DFE4 /* AVFoundation.framework */,
+				51240ADD15D09D2B0079DFE4 /* AudioToolbox.framework */,
+				51240A9315D097760079DFE4 /* BBDecibelMeter */,
+				51240AB415D097770079DFE4 /* BBDecibelMeterTests */,
+				51240A8C15D097760079DFE4 /* Frameworks */,
+				51240A8A15D097760079DFE4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		51240A8A15D097760079DFE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51240A8915D097760079DFE4 /* BBDecibelMeter.app */,
+				51240AAD15D097770079DFE4 /* BBDecibelMeterTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51240A8C15D097760079DFE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51240A8D15D097760079DFE4 /* UIKit.framework */,
+				51240A8F15D097760079DFE4 /* Foundation.framework */,
+				51240A9115D097760079DFE4 /* CoreGraphics.framework */,
+				51240AAE15D097770079DFE4 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51240A9315D097760079DFE4 /* BBDecibelMeter */ = {
+			isa = PBXGroup;
+			children = (
+				51240AD415D09AA70079DFE4 /* classes */,
+				51240A9C15D097760079DFE4 /* BBAppDelegate.h */,
+				51240A9D15D097760079DFE4 /* BBAppDelegate.m */,
+				51240A9F15D097760079DFE4 /* MainStoryboard_iPhone.storyboard */,
+				51240AA215D097760079DFE4 /* MainStoryboard_iPad.storyboard */,
+				51240AA515D097760079DFE4 /* BBViewController.h */,
+				51240AA615D097760079DFE4 /* BBViewController.m */,
+				51240A9415D097760079DFE4 /* Supporting Files */,
+			);
+			path = BBDecibelMeter;
+			sourceTree = "<group>";
+		};
+		51240A9415D097760079DFE4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				51240A9515D097760079DFE4 /* BBDecibelMeter-Info.plist */,
+				51240A9615D097760079DFE4 /* InfoPlist.strings */,
+				51240A9915D097760079DFE4 /* main.m */,
+				51240A9B15D097760079DFE4 /* BBDecibelMeter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		51240AB415D097770079DFE4 /* BBDecibelMeterTests */ = {
+			isa = PBXGroup;
+			children = (
+				51240ABA15D097770079DFE4 /* BBDecibelMeterTests.h */,
+				51240ABB15D097770079DFE4 /* BBDecibelMeterTests.m */,
+				51240AB515D097770079DFE4 /* Supporting Files */,
+			);
+			path = BBDecibelMeterTests;
+			sourceTree = "<group>";
+		};
+		51240AB515D097770079DFE4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				51240AB615D097770079DFE4 /* BBDecibelMeterTests-Info.plist */,
+				51240AB715D097770079DFE4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		51240AD415D09AA70079DFE4 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				51ED681A15D0A28100EC762C /* F3BarGauge.h */,
+				51ED681B15D0A28100EC762C /* F3BarGauge.m */,
+				51240AD515D09AA70079DFE4 /* BBDecibelMeter.h */,
+				51240AD615D09AA70079DFE4 /* BBDecibelMeter.m */,
+				51240AD715D09AA70079DFE4 /* BBMath.h */,
+				51240AD815D09AA70079DFE4 /* BBMath.m */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51240A8815D097760079DFE4 /* BBDecibelMeter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51240ABF15D097770079DFE4 /* Build configuration list for PBXNativeTarget "BBDecibelMeter" */;
+			buildPhases = (
+				51240A8515D097760079DFE4 /* Sources */,
+				51240A8615D097760079DFE4 /* Frameworks */,
+				51240A8715D097760079DFE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBDecibelMeter;
+			productName = BBDecibelMeter;
+			productReference = 51240A8915D097760079DFE4 /* BBDecibelMeter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		51240AAC15D097770079DFE4 /* BBDecibelMeterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51240AC215D097770079DFE4 /* Build configuration list for PBXNativeTarget "BBDecibelMeterTests" */;
+			buildPhases = (
+				51240AA815D097770079DFE4 /* Sources */,
+				51240AA915D097770079DFE4 /* Frameworks */,
+				51240AAA15D097770079DFE4 /* Resources */,
+				51240AAB15D097770079DFE4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51240AB315D097770079DFE4 /* PBXTargetDependency */,
+			);
+			name = BBDecibelMeterTests;
+			productName = BBDecibelMeterTests;
+			productReference = 51240AAD15D097770079DFE4 /* BBDecibelMeterTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51240A8015D097760079DFE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BB;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Jonathan Beebe";
+			};
+			buildConfigurationList = 51240A8315D097760079DFE4 /* Build configuration list for PBXProject "BBDecibelMeter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 51240A7E15D097760079DFE4;
+			productRefGroup = 51240A8A15D097760079DFE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51240A8815D097760079DFE4 /* BBDecibelMeter */,
+				51240AAC15D097770079DFE4 /* BBDecibelMeterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51240A8715D097760079DFE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51240A9815D097760079DFE4 /* InfoPlist.strings in Resources */,
+				51240AA115D097760079DFE4 /* MainStoryboard_iPhone.storyboard in Resources */,
+				51240AA415D097760079DFE4 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51240AAA15D097770079DFE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51240AB915D097770079DFE4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51240AAB15D097770079DFE4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51240A8515D097760079DFE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51240A9A15D097760079DFE4 /* main.m in Sources */,
+				51240A9E15D097760079DFE4 /* BBAppDelegate.m in Sources */,
+				51240AA715D097760079DFE4 /* BBViewController.m in Sources */,
+				51240AD915D09AA70079DFE4 /* BBDecibelMeter.m in Sources */,
+				51240ADB15D09AA70079DFE4 /* BBMath.m in Sources */,
+				51ED681C15D0A28100EC762C /* F3BarGauge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51240AA815D097770079DFE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51240ABC15D097770079DFE4 /* BBDecibelMeterTests.m in Sources */,
+				51240ADA15D09AA70079DFE4 /* BBDecibelMeter.m in Sources */,
+				51240ADC15D09AA70079DFE4 /* BBMath.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51240AB315D097770079DFE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51240A8815D097760079DFE4 /* BBDecibelMeter */;
+			targetProxy = 51240AB215D097770079DFE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		51240A9615D097760079DFE4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51240A9715D097760079DFE4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		51240A9F15D097760079DFE4 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51240AA015D097760079DFE4 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		51240AA215D097760079DFE4 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51240AA315D097760079DFE4 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		51240AB715D097770079DFE4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51240AB815D097770079DFE4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		51240ABD15D097770079DFE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51240ABE15D097770079DFE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		51240AC015D097770079DFE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBDecibelMeter/BBDecibelMeter-Prefix.pch";
+				INFOPLIST_FILE = "BBDecibelMeter/BBDecibelMeter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		51240AC115D097770079DFE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBDecibelMeter/BBDecibelMeter-Prefix.pch";
+				INFOPLIST_FILE = "BBDecibelMeter/BBDecibelMeter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		51240AC315D097770079DFE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BBDecibelMeter.app/BBDecibelMeter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBDecibelMeter/BBDecibelMeter-Prefix.pch";
+				INFOPLIST_FILE = "BBDecibelMeterTests/BBDecibelMeterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		51240AC415D097770079DFE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BBDecibelMeter.app/BBDecibelMeter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBDecibelMeter/BBDecibelMeter-Prefix.pch";
+				INFOPLIST_FILE = "BBDecibelMeterTests/BBDecibelMeterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51240A8315D097760079DFE4 /* Build configuration list for PBXProject "BBDecibelMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51240ABD15D097770079DFE4 /* Debug */,
+				51240ABE15D097770079DFE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51240ABF15D097770079DFE4 /* Build configuration list for PBXNativeTarget "BBDecibelMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51240AC015D097770079DFE4 /* Debug */,
+				51240AC115D097770079DFE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51240AC215D097770079DFE4 /* Build configuration list for PBXNativeTarget "BBDecibelMeterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51240AC315D097770079DFE4 /* Debug */,
+				51240AC415D097770079DFE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51240A8015D097760079DFE4 /* Project object */;
+}
