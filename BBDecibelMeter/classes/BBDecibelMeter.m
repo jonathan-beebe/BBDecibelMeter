@@ -12,6 +12,9 @@
 #import <math.h>
 #import "BBMath.h"
 
+NSString * const kBBDecibelMeterAvgPowerKey = @"averagePower";
+NSString * const kBBDecibelMeterPeakPowerKey = @"peakPower";
+
 @interface BBDecibelMeter() {
     AVAudioRecorder* _recorder;
     double min;

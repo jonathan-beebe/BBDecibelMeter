@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+// Use these constants to access the properties using KVO
+extern NSString *const kBBDecibelMeterAvgPowerKey;
+extern NSString *const kBBDecibelMeterPeakPowerKey;
+
 @interface BBDecibelMeter : NSObject
 
 @property (nonatomic, readonly) float averagePower;

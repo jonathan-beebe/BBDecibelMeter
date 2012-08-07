@@ -31,8 +31,8 @@ static
     
     meter_ = [BBDecibelMeter meter];
     [meter_ startMeasuring];
-    [meter_ addObserver:self forKeyPath:@"averagePower" options:0 context:nil];
-    [meter_ addObserver:self forKeyPath:@"peakPower" options:0 context:nil];
+    [meter_ addObserver:self forKeyPath:kBBDecibelMeterAvgPowerKey options:0 context:nil];
+    [meter_ addObserver:self forKeyPath:kBBDecibelMeterPeakPowerKey options:0 context:nil];
     
     fbLevelView.numBars = 20;
     fbLevelView.holdPeak = YES;
@@ -58,7 +58,7 @@ static
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if([keyPath isEqualToString:@"averagePower"]) {
+    if([keyPath isEqualToString:kBBDecibelMeterAvgPowerKey]) {
         
         //NSLog(@"Power: %f, Peak: %f", meter_.averagePower, meter_.peakPower);
         
