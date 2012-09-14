@@ -95,7 +95,12 @@ NSString * const kBBDecibelMeterPeakPowerKey = @"peakPower";
                                           [NSNumber numberWithBool:NO],AVLinearPCMIsFloatKey,
                                           nil];
         NSError* error = nil;
-        _recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL URLWithString:[NSTemporaryDirectory() stringByAppendingPathComponent:@"tmp.caf"]]
+        
+        NSString *tempDir = [NSTemporaryDirectory() stringByAppendingPathComponent:@"tmp.caf"];
+        tempDir = [tempDir stringByAddingPercentEscapesUsingEncoding: NSASCIIStringEncoding];
+        NSURL *url = [NSURL URLWithString:tempDir];
+        
+        _recorder = [[AVAudioRecorder alloc] initWithURL:url
                                                 settings:recorderSettings
                                                    error:&error];
         _recorder.meteringEnabled = YES;
