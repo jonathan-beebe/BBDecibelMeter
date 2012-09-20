@@ -12,7 +12,7 @@
 
 + (float) scaleNumber: (float)num withinRangeMin: (float)rangeMin andRangeMax: (float)rangeMax withScaleMin: (float)scaleMin andScaleMax: (float)scaleMax
 {
-    return (num / ((rangeMax - rangeMin) / (scaleMax - scaleMin))) + scaleMin;
+    return ( ((scaleMax - scaleMin) * (num - rangeMin)) / (rangeMax - rangeMin)) + scaleMin;
 }
 
 @end
