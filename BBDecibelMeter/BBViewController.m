@@ -12,11 +12,12 @@
 static 
 @interface BBViewController ()
 
+@property (nonatomic, strong) BBDecibelMeter *meter;
+
 @end
 
-@implementation BBViewController {
-    BBDecibelMeter *meter_;
-}
+@implementation BBViewController
+
 @synthesize peakProgressView;
 @synthesize avgProgressView;
 @synthesize fbLevelView;
@@ -29,10 +30,11 @@ static
     peakProgressView.trackImage = nil;
     peakProgressView.trackTintColor = [UIColor clearColor];
     
-    meter_ = [BBDecibelMeter meter];
-    [meter_ startMeasuring];
-    [meter_ addObserver:self forKeyPath:kBBDecibelMeterAvgPowerKey options:0 context:nil];
-    [meter_ addObserver:self forKeyPath:kBBDecibelMeterPeakPowerKey options:0 context:nil];
+    self.meter = [BBDecibelMeter meter];
+    self.meter.interval = 1/30;
+    [self.meter startMeasuring];
+    [self.meter addObserver:self forKeyPath:kBBDecibelMeterAvgPowerKey options:0 context:nil];
+    [self.meter addObserver:self forKeyPath:kBBDecibelMeterPeakPowerKey options:0 context:nil];
     
     fbLevelView.numBars = 20;
     fbLevelView.holdPeak = YES;
@@ -43,8 +45,8 @@ static
     [self setPeakProgressView:nil];
     [self setAvgProgressView:nil];
     [self setFbLevelView:nil];
+    self.meter = nil;
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -60,14 +62,14 @@ static
 {
     if([keyPath isEqualToString:kBBDecibelMeterAvgPowerKey]) {
         
-        //NSLog(@"Power: %f, Peak: %f", meter_.averagePower, meter_.peakPower);
+        //NSLog(@"Power: %f, Peak: %f", self.meter.averagePower, self.meter.peakPower);
         
-        [peakProgressView setProgress:meter_.peakPower];
-        [avgProgressView setProgress:meter_.averagePower];
+        [peakProgressView setProgress:self.meter.peakPower];
+        [avgProgressView setProgress:self.meter.averagePower];
         
         [fbLevelView resetPeak];
-        fbLevelView.value = meter_.peakPower;
-        fbLevelView.value = meter_.averagePower;
+        fbLevelView.value = self.meter.peakPower;
+        fbLevelView.value = self.meter.averagePower;
     }
 }
 

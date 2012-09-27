@@ -17,6 +17,7 @@ extern NSString *const kBBDecibelMeterPeakPowerKey;
 @property (nonatomic, readonly) float averagePower;
 @property (nonatomic, readonly) float peakPower;
 @property (nonatomic, readonly) BOOL recording;
+@property (nonatomic, assign) float interval;
 
 + (id) meter;
 

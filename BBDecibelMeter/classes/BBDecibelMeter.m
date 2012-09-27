@@ -10,20 +10,20 @@
 
 #import <AVFoundation/AVFoundation.h>
 #import <math.h>
-#import "BBMath.h"
 
 NSString * const kBBDecibelMeterAvgPowerKey = @"averagePower";
 NSString * const kBBDecibelMeterPeakPowerKey = @"peakPower";
 
 @interface BBDecibelMeter() {
-    AVAudioRecorder* _recorder;
-    double min;
-    double max;
-    int powerFactor;
-    NSTimer *_decibelTimer;
-    
     dispatch_queue_t audioRecorderQueue;
 }
+
+@property (nonatomic, assign) int powerFactor;
+@property (nonatomic, assign) int min;
+@property (nonatomic, assign) int max;
+
+@property (nonatomic, strong) AVAudioRecorder *recorder;
+@property (nonatomic, strong) NSTimer *decibelTimer;
 
 @property (nonatomic, assign) float averagePower;
 @property (nonatomic, assign) float peakPower;
@@ -34,13 +34,11 @@ NSString * const kBBDecibelMeterPeakPowerKey = @"peakPower";
 - (float) peak;
 - (float) peakScale;
 
+- (float) scale:(float)num rangeMin:(float)rMin rangeMax:(float)rMax scaleMin:(float)sMin scaleMax:(float)sMax;
+
 @end
 
 @implementation BBDecibelMeter
-
-@synthesize averagePower;
-@synthesize peakPower;
-@synthesize recording;
 
 + (id) meter
 {
@@ -50,7 +48,9 @@ NSString * const kBBDecibelMeterPeakPowerKey = @"peakPower";
 - (id) init
 {
     self = [super init];
-    
+
+    self.interval = 0.1;
+
     audioRecorderQueue = dispatch_queue_create("audio recorder thread", NULL);
     
     // this article shows using 20
@@ -59,24 +59,29 @@ NSString * const kBBDecibelMeterPeakPowerKey = @"peakPower";
     //
     // good discussion here: http://stackoverflow.com/questions/8586216/linear-x-logarithmic-scale
     
-    powerFactor = 40;
+    self.powerFactor = 40;
     
     if(self) {
-        min = pow (10, 0 / powerFactor);
-        max = pow (10, 160 / powerFactor);
+        self.min = pow (10, 0 / self.powerFactor);
+        self.max = pow (10, 160 / self.powerFactor);
     }
     return self;
 }
 
 - (void) dealloc
 {
-    [_decibelTimer invalidate];
-    _decibelTimer = nil;
+    [self.decibelTimer invalidate];
+    self.decibelTimer = nil;
     
     if(_recorder) {
         [_recorder stop];
         _recorder = nil;
     }
+}
+
+- (float) scale:(float)num rangeMin:(float)rMin rangeMax:(float)rMax scaleMin:(float)sMin scaleMax:(float)sMax
+{
+    return ( ((sMax - sMin) * (num - rMin)) / (rMax - rMin)) + sMin;
 }
 
 - (void) startMeasuring
@@ -110,19 +115,17 @@ NSString * const kBBDecibelMeterPeakPowerKey = @"peakPower";
         [_recorder record];
         dispatch_release(audioRecorderQueue);
     });
-    
-    //dispatch_async(dispatch_get_main_queue(), ^{
-    [_decibelTimer invalidate];
-    _decibelTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(recordDecibelLevel:) userInfo:nil repeats:YES];
-    //});
+
+    [self.decibelTimer invalidate];
+    self.decibelTimer = [NSTimer scheduledTimerWithTimeInterval:self.interval target:self selector:@selector(recordDecibelLevel:) userInfo:nil repeats:YES];
     
     self.recording = YES;
 }
 
 - (void) stopMeasuring
 {
-    [_decibelTimer invalidate];
-    _decibelTimer = nil;
+    [self.decibelTimer invalidate];
+    self.decibelTimer = nil;
     
     if(_recorder) {
         [_recorder stop];
@@ -155,18 +158,20 @@ NSString * const kBBDecibelMeterPeakPowerKey = @"peakPower";
 
 - (float) powerScale
 {
-    double linear = pow (10, self.power / powerFactor);
-    return fabsf([BBMath scaleNumber:linear withinRangeMin:min andRangeMax:max withScaleMin:0.0f andScaleMax:1.0f]);
+    double linear = pow (10, self.power / self.powerFactor);
+    return fabsf([self scale:linear rangeMin:self.min rangeMax:self.max scaleMin:0.0f scaleMax:1.0f]);
 }
 
 - (float) peakScale
 {
-    double linear = pow (10, self.peak / powerFactor);
-    return fabsf([BBMath scaleNumber:linear withinRangeMin:min andRangeMax:max withScaleMin:0.0f andScaleMax:1.0f]);
+    double linear = pow (10, self.peak / self.powerFactor);
+    return fabsf([self scale:linear rangeMin:self.min rangeMax:self.max scaleMin:0.0f scaleMax:1.0f]);
 }
 
 - (void)recordDecibelLevel:(NSTimer*)timer
 {
+
+    NSLog(@"record...");
     // Only make changes to the values when they differ.
     // This makes KVO more efficient as it's not triggered when the values don't change.
     

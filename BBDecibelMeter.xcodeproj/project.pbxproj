@@ -23,8 +23,6 @@
 		51240ABC15D097770079DFE4 /* BBDecibelMeterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240ABB15D097770079DFE4 /* BBDecibelMeterTests.m */; };
 		51240AD915D09AA70079DFE4 /* BBDecibelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240AD615D09AA70079DFE4 /* BBDecibelMeter.m */; };
 		51240ADA15D09AA70079DFE4 /* BBDecibelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240AD615D09AA70079DFE4 /* BBDecibelMeter.m */; };
-		51240ADB15D09AA70079DFE4 /* BBMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240AD815D09AA70079DFE4 /* BBMath.m */; };
-		51240ADC15D09AA70079DFE4 /* BBMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 51240AD815D09AA70079DFE4 /* BBMath.m */; };
 		51240AE015D09D4F0079DFE4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51240ADF15D09D4F0079DFE4 /* AVFoundation.framework */; };
 		51ED681C15D0A28100EC762C /* F3BarGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED681B15D0A28100EC762C /* F3BarGauge.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
@@ -62,8 +60,6 @@
 		51240ABB15D097770079DFE4 /* BBDecibelMeterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBDecibelMeterTests.m; sourceTree = "<group>"; };
 		51240AD515D09AA70079DFE4 /* BBDecibelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBDecibelMeter.h; sourceTree = "<group>"; };
 		51240AD615D09AA70079DFE4 /* BBDecibelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBDecibelMeter.m; sourceTree = "<group>"; };
-		51240AD715D09AA70079DFE4 /* BBMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMath.h; sourceTree = "<group>"; };
-		51240AD815D09AA70079DFE4 /* BBMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMath.m; sourceTree = "<group>"; };
 		51240ADD15D09D2B0079DFE4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		51240ADF15D09D4F0079DFE4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		51ED681A15D0A28100EC762C /* F3BarGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3BarGauge.h; sourceTree = "<group>"; };
@@ -179,8 +175,6 @@
 				51ED681B15D0A28100EC762C /* F3BarGauge.m */,
 				51240AD515D09AA70079DFE4 /* BBDecibelMeter.h */,
 				51240AD615D09AA70079DFE4 /* BBDecibelMeter.m */,
-				51240AD715D09AA70079DFE4 /* BBMath.h */,
-				51240AD815D09AA70079DFE4 /* BBMath.m */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -298,7 +292,6 @@
 				51240A9E15D097760079DFE4 /* BBAppDelegate.m in Sources */,
 				51240AA715D097760079DFE4 /* BBViewController.m in Sources */,
 				51240AD915D09AA70079DFE4 /* BBDecibelMeter.m in Sources */,
-				51240ADB15D09AA70079DFE4 /* BBMath.m in Sources */,
 				51ED681C15D0A28100EC762C /* F3BarGauge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +302,6 @@
 			files = (
 				51240ABC15D097770079DFE4 /* BBDecibelMeterTests.m in Sources */,
 				51240ADA15D09AA70079DFE4 /* BBDecibelMeter.m in Sources */,
-				51240ADC15D09AA70079DFE4 /* BBMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
